@@ -43,4 +43,4 @@ def decoder(signal):
     return int(''.join(decoded[''.join(sorted(sig))] for sig in signal    [1]))
 
 
-solveDay("./input.txt")
+solveDay("./day1.txt")
