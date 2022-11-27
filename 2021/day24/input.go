@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/stephensli/advent-of-code-2021/helpers/file"
+	"github.com/stephensli/aoc/helpers/file"
 )
 
 func parseInput(filePath string) [][]string {
@@ -24,6 +24,6 @@ func parseInput(filePath string) [][]string {
 		}
 	}
 	sections = append(sections, section)
-	//printers.JsonPrint(sections, true)
+	// printers.JsonPrint(sections, true)
 	return sections
 }

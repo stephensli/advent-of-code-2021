@@ -1,6 +1,6 @@
 package main
 
-import "github.com/stephensli/advent-of-code-2021/helpers/file"
+import "github.com/stephensli/aoc/helpers/file"
 
 func parseInput(filePath string) GameState {
 	lines := file.ToTextSplit(filePath, "")[1:]

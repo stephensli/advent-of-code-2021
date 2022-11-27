@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 	"github.com/life4/genesis/slices"
-	"github.com/stephensli/advent-of-code-2021/helpers/aoc"
-	"github.com/stephensli/advent-of-code-2021/helpers/file"
+	"github.com/stephensli/aoc/helpers/aoc"
+	"github.com/stephensli/aoc/helpers/file"
 )
 
 func parseInput(input []string) []Present {

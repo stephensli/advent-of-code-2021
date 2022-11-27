@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/stephensli/advent-of-code-2021/helpers/aoc"
+	"github.com/stephensli/aoc/helpers/aoc"
 )
 
 func partOne(sections [][]string) {

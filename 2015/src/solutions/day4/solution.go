@@ -4,8 +4,8 @@ import (
 	"crypto/md5"
 	"encoding/hex"
 	"fmt"
-	"github.com/stephensli/advent-of-code-2021/helpers/aoc"
-	"github.com/stephensli/advent-of-code-2021/helpers/file"
+	"github.com/stephensli/aoc/helpers/aoc"
+	"github.com/stephensli/aoc/helpers/file"
 	"strings"
 )
 

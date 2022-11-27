@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/stephensli/advent-of-code-2021/helpers"
+	"github.com/stephensli/aoc/helpers"
 )
 
 type position struct {
@@ -138,7 +138,7 @@ func processDay(grid [][]Octopus) int {
 		break
 	}
 
-	//printGrid(grid)
+	// printGrid(grid)
 
 	return totalFlash
 }

@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/stephensli/advent-of-code-2021/helpers"
+	"github.com/stephensli/aoc/helpers"
 )
 
 var (
@@ -20,7 +20,7 @@ type Target struct {
 	yMax int
 }
 
-//getMinxVelocity works by only incrementing by the velocity shift
+// getMinxVelocity works by only incrementing by the velocity shift
 // until we hit the Target.
 //
 // e.g 1+2+3+4+5=15

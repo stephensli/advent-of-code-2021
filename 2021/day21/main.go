@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/stephensli/advent-of-code-2021/helpers/aoc"
-	"github.com/stephensli/advent-of-code-2021/helpers/cache"
-	"github.com/stephensli/advent-of-code-2021/helpers/file"
 	"math"
+
+	"github.com/stephensli/aoc/helpers/aoc"
+	"github.com/stephensli/aoc/helpers/cache"
+	"github.com/stephensli/aoc/helpers/file"
 )
 
 func valueOfDeterministicDie(current, min, max int) (value int, newDie int) {
@@ -89,8 +90,8 @@ func partTwo(p1, p2 int) {
 		}
 	}
 
-	//because of a memory limit, instead lets do 1x at a time.
-	//p1, p2, turn
+	// because of a memory limit, instead lets do 1x at a time.
+	// p1, p2, turn
 	c := cache.New[gameState, []int64]()
 
 	result := quantumDice(gameState{
@@ -139,9 +140,10 @@ func partOne(playerOnePosition, playerTwoPosition int) {
 }
 
 func main() {
-	defer aoc.Setup(2021, 21)()
+	path, deferFunc := aoc.Setup(2021, 21, false)
+	defer deferFunc()
 
-	lines := file.ToTextLines("./input-example.txt")
+	lines := file.ToTextLines(path)
 
 	var playerOnePosition, playerTwoPosition int
 

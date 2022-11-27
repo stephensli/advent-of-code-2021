@@ -2,9 +2,13 @@ package main
 
 import (
 	"fmt"
-	"github.com/stephensli/advent-of-code-2021/helpers"
-	"github.com/stephensli/advent-of-code-2021/helpers/search"
 	"strings"
+
+	"github.com/life4/genesis/slices"
+
+	"github.com/stephensli/aoc/helpers/aoc"
+	"github.com/stephensli/aoc/helpers/file"
+	"github.com/stephensli/aoc/helpers/printers"
 )
 
 func parseCaveWithAllValidMappings(inputLines [][]string) map[string]map[string]bool {
@@ -68,8 +72,8 @@ func findAllValidPaths(caveMap map[string]map[string]bool, nextDirection string,
 	for s, _ := range nextPositionDirections {
 		// if we are going into a small cave and said small cave is in our history
 		// then we cannot enter it again and should continue without it
-		if (s == strings.ToLower(s) && search.StringArrayContains(history,
-			s) && StringArrayContainsTwiceAnyLower(history)) || s == "start" {
+		if (s == strings.ToLower(s) && slices.Contains(history, s) &&
+			StringArrayContainsTwiceAnyLower(history)) || s == "start" {
 			continue
 		}
 
@@ -83,12 +87,15 @@ func findAllValidPaths(caveMap map[string]map[string]bool, nextDirection string,
 var first = false
 
 func main() {
+	path, deferFunc := aoc.Setup(2021, 12, false)
+	defer deferFunc()
+
 	// 1. first read the input into a format which is parseable.
 	// this can be used to generate the network.
-	inputLines := helpers.ReadFileToTextSplit("./2021/day12/input.txt", "-")
+	inputLines := file.ToTextSplit(path, "-")
 	caveMap := parseCaveWithAllValidMappings(inputLines)
 
-	helpers.JsonPrint(caveMap, "day12", true)
+	printers.JsonPrint(caveMap, true)
 
 	var finalResult [][]string
 

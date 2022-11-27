@@ -1,4 +1,4 @@
-module github.com/stephensli/advent-of-code-2021
+module  github.com/stephensli/aoc
 
 go 1.18
 

@@ -2,9 +2,9 @@ package main
 
 import (
 	"container/heap"
-	"github.com/stephensli/advent-of-code-2021/helpers/aoc"
-	"github.com/stephensli/advent-of-code-2021/helpers/file"
-	"github.com/stephensli/advent-of-code-2021/helpers/queue"
+	"github.com/stephensli/aoc/helpers/aoc"
+	"github.com/stephensli/aoc/helpers/file"
+	"github.com/stephensli/aoc/helpers/queue"
 	"math"
 )
 

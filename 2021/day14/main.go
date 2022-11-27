@@ -5,7 +5,9 @@ import (
 	"math"
 	"strings"
 
-	"github.com/stephensli/advent-of-code-2021/helpers"
+	"github.com/stephensli/aoc/helpers"
+	"github.com/stephensli/aoc/helpers/aoc"
+	"github.com/stephensli/aoc/helpers/file"
 )
 
 func parseInput(input []string) (string, map[string]string) {
@@ -34,7 +36,10 @@ func first(elements map[string]int64) {
 }
 
 func main() {
-	lines := helpers.ReadFileToTextLines("./day14/input-example.txt")
+	path, deferFunc := aoc.Setup(2021, 14, false)
+	defer deferFunc()
+
+	lines := file.ToTextLines(path)
 	translate := map[string]string{}
 	polymer := lines[0]
 

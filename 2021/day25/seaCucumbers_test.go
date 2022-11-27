@@ -2,7 +2,7 @@ package main
 
 import (
 	"encoding/json"
-	"github.com/stephensli/advent-of-code-2021/helpers/file"
+	"github.com/stephensli/aoc/helpers/file"
 	"github.com/stretchr/testify/assert"
 	"io/ioutil"
 	"strings"

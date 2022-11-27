@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/stephensli/advent-of-code-2021/helpers"
+	"github.com/stephensli/aoc/helpers"
 )
 
 type SeaCucumber int

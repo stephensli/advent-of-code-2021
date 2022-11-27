@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/stephensli/advent-of-code-2021/helpers/aoc"
-	"github.com/stephensli/advent-of-code-2021/helpers/file"
-	"github.com/stephensli/advent-of-code-2021/helpers/numbers"
-	"github.com/stephensli/advent-of-code-2021/helpers/printers"
+	"github.com/stephensli/aoc/helpers/aoc"
+	"github.com/stephensli/aoc/helpers/file"
+	"github.com/stephensli/aoc/helpers/numbers"
+	"github.com/stephensli/aoc/helpers/printers"
 )
 
 type Cuboid struct {

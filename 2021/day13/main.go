@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/stephensli/advent-of-code-2021/helpers"
+	"github.com/stephensli/aoc/helpers"
 )
 
 type Point struct {

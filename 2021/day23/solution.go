@@ -2,10 +2,10 @@ package main
 
 import (
 	"container/heap"
-	"github.com/stephensli/advent-of-code-2021/helpers/aoc"
-	"github.com/stephensli/advent-of-code-2021/helpers/cache"
-	"github.com/stephensli/advent-of-code-2021/helpers/numbers"
-	"github.com/stephensli/advent-of-code-2021/helpers/queue"
+	"github.com/stephensli/aoc/helpers/aoc"
+	"github.com/stephensli/aoc/helpers/cache"
+	"github.com/stephensli/aoc/helpers/numbers"
+	"github.com/stephensli/aoc/helpers/queue"
 	"math"
 )
 
@@ -132,7 +132,7 @@ func solveForInput(startingGameState GameState) int {
 						Amphipod: hallwayPosition.Amphipod,
 					})
 
-					//newGameState.history = append(newGameState.history, &gameState)
+					// newGameState.history = append(newGameState.history, &gameState)
 					heap.Push(&minPriorityQueue, &queue.Item{Value: newGameState, Priority: additionalCost})
 				}
 			}
@@ -208,7 +208,7 @@ func solveForInput(startingGameState GameState) int {
 					State:    Occupied,
 				}
 
-				//newGameState.history = append(newGameState.history, &gameState)
+				// newGameState.history = append(newGameState.history, &gameState)
 
 				heap.Push(&minPriorityQueue, &queue.Item{
 					Value:    newGameState,
@@ -264,7 +264,7 @@ func main() {
 	defer aoc.Setup(2021, 23)()
 
 	startGameState := parseInput("./input.txt")
-	//printers.JsonPrint(startGameState, true)
+	// printers.JsonPrint(startGameState, true)
 
 	// Rules
 	// 1. They will never stop on the space immediately outside any room.

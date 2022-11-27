@@ -2,9 +2,10 @@ package main
 
 import (
 	"github.com/life4/genesis/slices"
-	"github.com/stephensli/advent-of-code-2021/helpers/aoc"
-	"github.com/stephensli/advent-of-code-2021/helpers/cache"
-	"github.com/stephensli/advent-of-code-2021/helpers/file"
+
+	"github.com/stephensli/aoc/helpers/aoc"
+	"github.com/stephensli/aoc/helpers/cache"
+	"github.com/stephensli/aoc/helpers/file"
 )
 
 var (

@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/stephensli/advent-of-code-2021/helpers/aoc"
-	"github.com/stephensli/advent-of-code-2021/helpers/file"
-	"github.com/stephensli/advent-of-code-2021/helpers/printers"
+	"github.com/stephensli/aoc/helpers/aoc"
+	"github.com/stephensli/aoc/helpers/file"
+	"github.com/stephensli/aoc/helpers/printers"
 )
 
 func parseInput(lines [][]string) [][]SeaCucumber {
@@ -38,12 +38,12 @@ func partOne(input [][]SeaCucumber) {
 	// then teh sea cucumbers' int the south facing herd attempt to move one location.
 	//
 	// when a herd moves forward, every sea cucumber in the herd first simultaneous considers whether there
-	//is a sea cucumber in the adjacent location its facing. (even another sea cucumber facing the same direction).
+	// is a sea cucumber in the adjacent location its facing. (even another sea cucumber facing the same direction).
 	//
 	// then every sea cucumber facing an empty location simultaneously moves into that location.
 	//
 	// Due to strong water currents in the area, sea cucumbers that move off the right edge of the map appear on the
-	//left edge, and sea cucumbers that move off the bottom edge of the map appear on the top edge.
+	// left edge, and sea cucumbers that move off the bottom edge of the map appear on the top edge.
 	resp, changes := StepCucumbers(input)
 
 	count := 1
@@ -61,9 +61,10 @@ func partOne(input [][]SeaCucumber) {
 }
 
 func main() {
-	defer aoc.Setup(2021, 25)()
+	path, deferFunc := aoc.Setup(2021, 25, false)
+	defer deferFunc()
 
-	lines := file.ToTextSplit("./input.txt", "")
+	lines := file.ToTextSplit(path, "")
 	input := parseInput(lines)
 	printers.JsonPrint(input, true)
 
