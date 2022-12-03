@@ -60,6 +60,14 @@ func (c SimpleCache[K, V]) Len() int {
 	return len(c.items)
 }
 
+func (c SimpleCache[K, V]) Keys() []K {
+	result := make([]K, 0, len(c.items))
+	for key, _ := range c.items {
+		result = append(result, key)
+	}
+	return result
+}
+
 func (c SimpleCache[K, V]) Values() []V {
 	result := make([]V, 0, len(c.items))
 	for _, value := range c.items {
