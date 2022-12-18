@@ -4,6 +4,8 @@ github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/life4/genesis v1.0.2 h1:uTH4aRV76hO+qJH5E8n3YSk0VUBxOsOMUImT1d4GfcI=
 github.com/life4/genesis v1.0.2/go.mod h1:jhY+sEN403+0uE54fjVAdVCYY8SCIrKioAatOlVJoGo=
+github.com/life4/genesis v1.1.0 h1:HB9NxdHqeXQLkdMhEoM5x3y7Mq2Bk7mdGqQrxGUTTo0=
+github.com/life4/genesis v1.1.0/go.mod h1:jhY+sEN403+0uE54fjVAdVCYY8SCIrKioAatOlVJoGo=
 github.com/matryer/is v1.4.0 h1:sosSmIWwkYITGrxZ25ULNDeKiMNzFSr4V/eqBQP0PeE=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
