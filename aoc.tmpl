@@ -1,0 +1,13 @@
+package main
+
+import (
+	"github.com/stephensli/aoc/helpers/aoc"
+)
+
+func main() {
+	path, complete := aoc.Setup(2022, 5, true)
+	defer complete()
+
+	aoc.PrintAnswer(1, path)
+	aoc.PrintAnswer(2, path)
+}
