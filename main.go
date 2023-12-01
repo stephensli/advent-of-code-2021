@@ -26,12 +26,14 @@ func main() {
 		Flags: []cli.Flag{
 			&cli.IntFlag{
 				Name:        "year",
+				Aliases:     []string{"y"},
 				Usage:       "The year of the newly started task",
 				Required:    true,
 				Destination: &inputs.year,
 			},
 			&cli.IntFlag{
 				Name:        "day",
+				Aliases:     []string{"d"},
 				Usage:       "The day that is being started",
 				Required:    true,
 				Destination: &inputs.day,

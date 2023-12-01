@@ -1,12 +1,11 @@
 module github.com/stephensli/aoc
 
-go 1.18
+go 1.21
 
 require (
 	github.com/life4/genesis v1.1.0
 	github.com/stretchr/testify v1.7.0
 	github.com/urfave/cli/v2 v2.23.7
-	golang.org/x/exp v0.0.0-20221217163422-3c43f8badb15
 )
 
 require (
