@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"text/tabwriter"
 )
 
 var (
@@ -12,13 +13,17 @@ var (
 )
 
 func PrettyPrintGird[V any](grid [][]V) {
+	w := tabwriter.NewWriter(os.Stdout, 0, 0, 2, ' ', tabwriter.TabIndent)
+
 	for i := 0; i < len(grid); i++ {
-		fmt.Print(i+1, ".\t")
+		fmt.Fprint(w, i, ".\t")
 		for j := 0; j < len(grid[i]); j++ {
-			fmt.Print(grid[i][j], "\t")
+			fmt.Fprint(w, "\t", grid[i][j])
 		}
-		fmt.Println()
+
+		fmt.Fprintln(w)
 	}
+	w.Flush()
 }
 
 func JsonPrint(val any, file bool) {

@@ -1,6 +1,6 @@
 package helpers
 
-func SetIfMissing(val map[string]int64, index string, def int64) {
+func SetIfMissing[T, K comparable](val map[T]K, index T, def K) {
 	if _, ok := val[index]; !ok {
 		val[index] = def
 	}
