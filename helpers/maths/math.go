@@ -20,3 +20,11 @@ func LowestCommonMultiple(a, b int, integers ...int) int {
 
 	return result
 }
+
+func Minimum[T int | int64 | float32 | float64](a, b T) T {
+	if a > b {
+		return b
+	}
+
+	return a
+}
