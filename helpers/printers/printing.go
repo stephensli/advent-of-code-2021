@@ -16,13 +16,14 @@ func PrettyPrintGird[V any](grid [][]V) {
 	w := tabwriter.NewWriter(os.Stdout, 0, 0, 2, ' ', tabwriter.TabIndent)
 
 	for i := 0; i < len(grid); i++ {
-		fmt.Fprint(w, i, ".\t")
+		fmt.Fprint(w, i, " |\t")
 		for j := 0; j < len(grid[i]); j++ {
 			fmt.Fprint(w, "\t", grid[i][j])
 		}
 
 		fmt.Fprintln(w)
 	}
+	fmt.Fprintln(w)
 	w.Flush()
 }
 

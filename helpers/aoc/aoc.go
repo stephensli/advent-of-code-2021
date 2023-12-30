@@ -42,6 +42,10 @@ func PrintAnswer(part int, answer interface{}) {
 	fmt.Printf("Part %d: %v\n", part, answer)
 }
 
+func PrintAnswerAny(answer interface{}) {
+	fmt.Printf("Result (part toggled in code): %v\n", answer)
+}
+
 func printExampleFlag() {
 	fmt.Print("\n########### ###########\n# EXAMPLE # # EXAMPLE #\n########### ###########\n")
 }

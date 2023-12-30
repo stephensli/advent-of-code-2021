@@ -37,8 +37,18 @@ func (pq *MinPriorityQueue) Pop() interface{} {
 	return item
 }
 
+// Get returns the priority of a passed key
+func (pq MinPriorityQueue) Get(value any) (interface{}, bool) {
+	for _, y := range pq {
+		if y.Value == value {
+			return y, true
+		}
+	}
+	return nil, false
+}
+
 // update modifies the priority and value of an Item in the queue.
-func (pq *MinPriorityQueue) update(item *Item, value interface{}, priority int) {
+func (pq *MinPriorityQueue) Update(item *Item, value interface{}, priority int) {
 	item.Value = value
 	item.Priority = priority
 	heap.Fix(pq, item.Index)
